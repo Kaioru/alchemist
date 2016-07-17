@@ -21,7 +21,9 @@ chmod +x ./partials/terminal.sh
 ./partials/developer.sh
 ./partials/terminal.sh
 
+# Configuration
 echo "fortune -a | cowsay | lolcat" >> ~/.config/fish/config.fish
+cp ./defaults/com.apple.Terminal.plist ~/Library/Preferences/com.apple.Terminal.plist
 
 fortune -a | cowsay | lolcat
 echo The Alchemist has finished brewing! | lolcat
