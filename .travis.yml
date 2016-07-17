@@ -1,4 +1,4 @@
 os:
   - osx
 script:
-  - bash installer.sh
+  - sudo bash installer.sh
