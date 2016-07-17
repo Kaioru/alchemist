@@ -2,7 +2,7 @@
 
 # Required
 brew install git
-brew cask github-desktop
+brew cask install github-desktop
 
 # Fish Shell
 brew install fish
@@ -11,10 +11,10 @@ chsh -s /usr/local/bin/fish
 
 # Atom
 brew cask install atom
-apm install -y todo
-apm install -y editorconfig
-apm install -y atom-beautify
-apm install -y language-pug
+apm install todo
+apm install editorconfig
+apm install atom-beautify
+apm install language-pug
 
 # Java
 brew cask install java
