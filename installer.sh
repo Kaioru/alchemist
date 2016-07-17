@@ -10,8 +10,9 @@ fi
 brew doctor
 brew update
 
-brew install brew-gem
+brew tap caskroom/cask
 brew install brew-cask
+brew install brew-gem
 
 chmod +x ./partials/applications.sh
 chmod +x ./partials/developer.sh
