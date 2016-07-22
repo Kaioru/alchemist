@@ -14,6 +14,8 @@ brew tap caskroom/cask
 brew install brew-cask
 brew install brew-gem
 
+xcode-select --install
+
 chmod +x ./partials/applications.sh
 chmod +x ./partials/developer.sh
 chmod +x ./partials/terminal.sh

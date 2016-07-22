@@ -16,6 +16,9 @@ apm install editorconfig
 apm install atom-beautify
 apm install language-pug
 
+# Database
+brew install mongodb
+
 # Java
 brew cask install java
 brew cask install intellij-idea
