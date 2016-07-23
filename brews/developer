@@ -1,7 +1,4 @@
-cask 'atom'
-
 cask 'java'
-cask 'intellij-idea'
 brew 'maven'
 brew 'gradle'
 
@@ -9,3 +6,6 @@ brew 'node'
 brew 'npm'
 
 brew 'docker'
+
+cask 'atom'
+cask 'intellij-idea'
