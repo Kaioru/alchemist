@@ -20,7 +20,8 @@ brew install mas
 
 brew upgrade
 
-find ./brews/* -exec echo "Starting installation with Brewfile, {}." \; -exec brew bundle --file="{}" \;
+find ./brews/* -type f ! -name "*.*" -exec echo "Starting installation with Brewfile, {}." \; -exec brew bundle --file="{}" \;
+find ./brews/* -name "*.sh" -exec echo "Starting installation with Bash Script, {}." \; -exec chmod +x "{}" \; -exec {} \;
 find ./configs/* -exec echo "Starting configuration with Bash Script, {}." \; -exec chmod +x "{}" \; -exec {} \;
 
 brew update
