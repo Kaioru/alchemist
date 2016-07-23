@@ -1,0 +1,12 @@
+cask 'flux'
+cask 'puush'
+cask 'caffeine'
+
+cask 'google-chrome'
+cask 'google-drive'
+
+cask 'discord'
+cask 'telegram'
+cask 'skype'
+
+cask 'cakebrew'

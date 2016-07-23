@@ -1,31 +1,27 @@
 #!/bin/bash
 
 if [ "$EUID" -ne 0 ]
-  then echo "Please run Alchemist as sudo."
+  then echo "Permission denied; please use sudo instead!"
   exit
 fi
 
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-
-brew doctor
-brew update
-
-brew tap caskroom/cask
-brew install brew-cask
-brew install brew-gem
-
+# Xcode CLI Tools
 xcode-select --install
 
-chmod +x ./partials/applications.sh
-chmod +x ./partials/developer.sh
-chmod +x ./partials/terminal.sh
-./partials/applications.sh
-./partials/developer.sh
-./partials/terminal.sh
+# Install brew, taps and commands
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+brew update
+brew doctor
 
-# Configuration
-cp ./defaults/com.apple.Terminal.plist ~/Library/Preferences/com.apple.Terminal.plist
+brew tap caskroom/cask
+brew tap homebrew/dupes
+brew install brew-gem
+brew install mas
 
-fortune -a | cowsay | lolcat
-echo The Alchemist has finished brewing! | lolcat
-exit
+brew upgrade
+
+find ./brews/* -exec echo "Starting installation with Brewfile, {}." \; -exec brew bundle --file="{}" \;
+find ./configs/* -exec echo "Starting configuration with Bash Script, {}." \; -exec chmod +x "{}" \; -exec {} \;
+
+brew update
+brew cleanup

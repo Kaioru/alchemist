@@ -1,0 +1,5 @@
+cask 'steam'
+cask 'steamcmd'
+cask 'osu'
+
+cask 'bit-slicer'
