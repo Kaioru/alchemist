@@ -4,11 +4,6 @@
 brew install git
 brew cask install github-desktop
 
-# Fish Shell
-brew install fish
-echo "/usr/local/bin/fish" >> /etc/shells
-chsh -s /usr/local/bin/fish
-
 # Atom
 brew cask install atom
 apm install todo
